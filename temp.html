@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toggle Button</title>
+    <style>
+        .main {
+            width: 200px;
+            height: 70px;
+            background-color: lightgray;
+            position: relative;
+            border-radius: 35px;
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            line-height: 50px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="main">
+            <div class="item" onclick="toggle()" id="green">OFF</div>
+        </div>
+    </center>
+
+    <script>
+        let isOn = false;
+
+        function toggle() {
+            const btn = document.getElementById("green");
+
+            if (!isOn) {
+                btn.style.left = "140px";
+                btn.innerText = "ON";
+                btn.style.backgroundColor = "green";
+                isOn = true;
+            } else {
+                btn.style.left = "10px";
+                btn.innerText = "OFF";
+                btn.style.backgroundColor = "red";
+                isOn = false;
+            }
+        }
+    </script>
+</body>
+</html>

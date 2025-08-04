@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 200px;
+            height: 70px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            position: relative;
+            border-radius: 35px;
+            background-color: lightgrey;
+        }
+        .item{
+            width: 50px;
+            height: 50px;
+            padding-top: 15px;
+           background-color: red;
+             border-radius: 50px;
+            text-align: center;
+            justify-content: space-between;
+            position: absolute;
+            margin-left: 5px;
+            transition: all 1s ease;
+             
+
+        }
+        .btn{
+            margin-top: 5px;
+            padding: 5px;
+        }
+       
+    </style>
+</head>
+<body>
+     <center>
+    <div class="main">
+        <!-- <div class="item" onclick="on()" id="green">ON</div> -->
+        <div class="item" onclick="circle()" id="rcir">OFF</div>
+    </div>
+    </center>
+ 
+
+     <script>
+        var ison = false;
+        function circle(){
+            
+            if(!ison){
+            document.getElementById("rcir").style.left = "140px";
+            document.getElementById("rcir").innerText = "ON";
+            document.getElementById("rcir").style.backgroundColor = "green";
+            ison = true;
+             
+        }
+            else{
+             document.getElementById("rcir").style.left = "10px";
+            document.getElementById("rcir").innerText = "OFF";
+            document.getElementById("rcir").style.backgroundColor = "red";
+            ison = false;
+        }
+    } 
+        </script>
+</body>
+</html>

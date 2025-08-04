@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   <style>
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .main {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .item {
+        width: 65px;
+        margin: 5px;
+        padding: 5px 7px;
+        border: 1px solid rgb(122, 106, 106);
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+    }
+    .part {
+        width: 25px;
+        height: 25px;
+        background: rgb(240, 239, 239);
+        border: 1px solid rgb(122, 106, 106);
+        border-radius: 50px;
+        position: absolute;
+        right: 0;
+        margin-right: 1px;
+        transition: all 0.2s ease;
+    
+       
+        
+        
+    }
+</style>
+
+<body>
+    <center>
+    <div class="main">
+        <div class="item" onclick="on()" id="green">ON <div class="part"></div></div>
+        <div class="item" onclick="off()" id="red">OFF <div class="part" id="circle"></div></div>
+       
+    </div>
+    </center>
+   
+    <script>
+        function on(){
+            document.getElementById("green").style.backgroundColor = "green";
+             document.getElementById("green").style.color = "white";
+             document.getElementById("red").style.backgroundColor = "";
+             document.getElementById("red").style.color = "black";
+        }
+        function off(){
+            document.getElementById("red").style.backgroundColor = "red";
+             document.getElementById("red").style.color = "white";
+             document.getElementById("green").style.backgroundColor = "";
+             document.getElementById("green").style.color = "black";
+           //  document.getElementById("circle").style.transition = "0.2s";
+        }
+    </script>
+</body>
+
+</html>

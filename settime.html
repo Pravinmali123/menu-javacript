@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2 id="demo">0</h2>
+<button onclick="change()">click me</button>
+    <script>
+        var data = 0;
+        var text = setInterval (function(){
+            data++;
+            document.getElementById("demo").innerText = data;
+        },1000)
+      // var text = setTimeout(data,3000)
+      
+
+       function change(){
+            clearInterval(text);
+       }
+    </script>
+    
+</body>
+</html>

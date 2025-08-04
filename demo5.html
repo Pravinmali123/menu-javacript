@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ON OFF Button</title>
+    <style>
+        .main {
+            width: 100px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .item {
+            padding: 5px 10px;
+            border: 1px solid rgb(122, 106, 106);
+            border-radius: 100px;
+            display: inline-block;
+            cursor: pointer;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="item" onclick="on()" id="green">ON</div>
+        <div class="item" onclick="off()" id="red">OFF</div>
+    </div>
+
+    <script>
+        function on(){
+            document.getElementById("green").style.backgroundColor = "green";
+            document.getElementById("green").style.color = "white";
+            document.getElementById("red").style.backgroundColor = ""; // OFF default
+            document.getElementById("red").style.color = "black";
+        }
+
+        function off(){
+            document.getElementById("red").style.backgroundColor = "red";
+            document.getElementById("red").style.color = "white";
+            document.getElementById("green").style.backgroundColor = ""; // ON default
+            document.getElementById("green").style.color = "black";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <button onclick="on()" id="green">ON LIGHT</button>
+    <img src="./on.png" alt="" width="400px" height="400px" id="light">
+    <button onclick="off()" id="red">OFF LIGHT</button>
+    </center>
+    <script>
+        function on(){
+            document.getElementById("light").src="on.png";
+            document.getElementById("green").style.backgroundColor = "green";
+             document.getElementById("green").style.color = "white";
+             document.getElementById("red").style.backgroundColor = "";
+             document.getElementById("red").style.color = "black";
+        }
+        function off(){
+            document.getElementById("light").src="off.png";
+             document.getElementById("red").style.backgroundColor = "red";
+             document.getElementById("red").style.color = "white";
+             document.getElementById("green").style.backgroundColor = "";
+             document.getElementById("green").style.color = "black";
+        }
+    </script>
+</body>
+</html>

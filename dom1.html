@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="text">hello</h1>
+    <button onclick="change()">font</button>
+    <button onclick="hub()">text</button>
+    <button onclick="color()">color</button>
+    <button onclick="text()">textAlign</button>
+    <button onclick="All_change()">All change</button>
+
+    <script>
+        function change() {
+            document.getElementById("text").style.fontSize = "50px";
+        }  
+        
+          function hub() {
+            document.getElementById("text").innerHTML = "hello world";
+        }
+        
+          function color() {
+            document.getElementById("text").style.color = "red";
+        } 
+
+        function text() {
+            document.getElementById("text").style.textAlign = "center";
+        }
+        function All_change() {
+            document.getElementById("text").innerHTML = "hello world";
+            document.getElementById("text").style.color = "red";
+            document.getElementById("text").style.fontSize = "50px";
+            document.getElementById("text").style.textAlign = "center";
+        }
+        document.getElementsByTagName("button").style.color = "gray";
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="change()">click me</button>
+    <h2 id = "demo">0</h2>
+    <script>
+        var data = 0;
+        function hub(){
+            data++;
+            document.getElementById("demo").innerHTML = data;
+
+        }
+        var text =  setInterval(hub,1000)
+        function change(){
+            clearInterval(text)
+        }
+
+    </script>
+</body>
+</html>
