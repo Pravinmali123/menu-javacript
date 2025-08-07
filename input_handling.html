@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="data" onclick="delhide()">
+    <button onclick="submitdata()">submit</button>
+    <h1 id="text"></h1>
+ <button value="delete" onclick="delet()" style="display: none;" id="del">Delete</button>
+
+    <script>
+        function submitdata() {
+            var data1 = document.getElementById("data").value
+            document.getElementById("text").innerHTML += data1 + "<br>";
+           
+            document.getElementById("data").value = "";
+
+            document.getElementById("del").style.display = "block";
+        }
+
+              function delet() {
+  let textElement = document.getElementById("text");
+            let currentText = textElement.innerHTML;
+
+            if (currentText.length > 0) {
+                textElement.innerHTML = currentText.slice(0, -1);
+            }
+            if (textElement.innerHTML.length === 0) {
+                document.getElementById("del").style.display = "none";
+            }
+        
+        }
+       
+    
+
+    </script>
+</body>
+
+</html>
