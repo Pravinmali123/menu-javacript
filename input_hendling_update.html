@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +11,9 @@
 <body>
     <input type="text" id="data" onclick="delhide()">
     <button onclick="submitdata()">submit</button>
-    <h1 id="text"></h1>
+    <div id="text"></div>
     <button value="delete" onclick="delet()" style="display: none;" id="del">Delete</button>
+    <button value="update" onclick="update()" style="display: none;" id="up">Update</button>
 
     <script>
         function submitdata() {
@@ -20,21 +22,27 @@
 
             document.getElementById("data").value = "";
 
-            document.getElementById("del").style.display = "block";
+            document.getElementById("del").style.display = "inline-block";
+            document.getElementById("up").style.display = "inline-block"; 
         }
 
         function delet() {
             document.getElementById("text").innerHTML =
                 document.getElementById("text").innerHTML.slice(0, -1);
+                document.getElementById("text").innerHTML.replace(/<br>$/," ");
 
             if (document.getElementById("text").innerHTML.length === 0) {
                 document.getElementById("del").style.display = "none";
+                document.getElementById("up").style.display = "none";
             }
 
         }
-
-
-
+          function update() {
+            let t = document.getElementById("text");
+            let a = t.innerText.split("\n");
+            document.getElementById("data").value = a.pop();
+            t.innerHTML = a.join("<br>");
+        }
     </script>
 </body>
 

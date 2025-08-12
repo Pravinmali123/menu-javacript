@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="data">
+    <button onclick="submitdata()">Submit</button>
+    <div id="text" style="margin: 10px;"></div>
+
+    <script>
+        function submitdata() {
+            var input = document.getElementById("data").value;
+            if (input === "") return;
+
+            var textDiv = document.getElementById("text");
+
+           
+            var lineDiv = document.createElement("div");
+         
+            var span = document.createElement("span");
+            span.textContent = input + " ";
+            lineDiv.appendChild(span);
+
+            var deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "Delete";
+            deleteBtn.onclick = function () {
+                lineDiv.remove();
+            };
+            lineDiv.appendChild(deleteBtn);
+
+            var updateBtn = document.createElement("button");
+            updateBtn.textContent = "Update";
+            updateBtn.onclick = function () {
+                document.getElementById("data").value = span.textContent.trim();
+                lineDiv.remove();
+            };
+            lineDiv.appendChild(updateBtn);
+
+           
+
+            textDiv.appendChild(lineDiv);
+            document.getElementById("data").value = "";
+        }
+    </script>
+</body>

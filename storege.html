@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // SESSION STORAGE
+sessionStorage.setItem("username", "Pravin");
+var st = sessionStorage.getItem("username");
+document.write(st); 
+sessionStorage.removeItem("username");
+sessionStorage.clear(); 
+
+// LOCAL STORAGE
+localStorage.setItem("theme", "dark");
+var lt = localStorage.getItem("theme");
+document.write(lt);
+localStorage.removeItem("theme");
+
+
+    </script>
+</body>
+</html>
